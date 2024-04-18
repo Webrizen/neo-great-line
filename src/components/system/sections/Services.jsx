@@ -85,9 +85,9 @@ export default function Services() {
         <section className="w-full min-h-screen bg-gray-950">
             <div className="relative">
                 <div className="flex items-center align-center text-center w-full flex-row absolute inset-x-0">
-                    <div className="flex border-gray-200 dark:border-green-800 w-full border-t border-solid"></div>
+                    <div className="flex border-gray-200 dark:border-gray-800 w-full border-t border-solid"></div>
                 </div>
-                <div className="w-full relative overflow-hidden h-px bg-gradient-to-r from-green-600 via-primary-400 to-green-600 max-w-5xl mx-auto">                    
+                <div className="w-full relative overflow-hidden h-px bg-gradient-to-r from-gray-800 via-primary-400 to-gray-800 max-w-5xl mx-auto">                    
                 </div>
             </div>
             <StickyScroll content={content} />
