@@ -43,7 +43,7 @@ export default function Testimonial() {
     const currentTestimonial = testimonials[currentTestimonialIndex];
 
     return (
-       <section className="py-20">
+       <section className="py-20 bg-gray-950">
             <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
                 <div className="space-y-4 max-w-2xl">
                     <span className="text-blue-600 dark:text-blue-500 font-semibold pl-6 relative before:absolute before:top-1/2 before:left-0 before:w-5 before:h-px before:bg-blue-600 dark:before:bg-blue-500 before:rounded-full">

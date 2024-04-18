@@ -1,4 +1,5 @@
 import Action from "@/components/system/sections/Action";
+import Faq from "@/components/system/sections/Faq";
 import Features from "@/components/system/sections/Features";
 import Hero from "@/components/system/sections/Hero";
 import Services from "@/components/system/sections/Services";
@@ -11,6 +12,7 @@ export default function Home() {
       <Features />
       <Testimonial />
       <Services />
+      <Faq />
       <Action />
     </>
   );
