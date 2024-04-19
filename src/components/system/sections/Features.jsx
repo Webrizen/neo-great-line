@@ -35,7 +35,7 @@ export default function Features() {
         // Set up an interval to change the selected feature every 30 seconds
         const id = setInterval(() => {
             setSelectedFeature(prevFeature => (prevFeature + 1) % features.length);
-        }, 3000);
+        }, 10000);
         setIntervalId(id);
 
         // Clean up the interval on component unmount
@@ -98,7 +98,7 @@ export default function Features() {
                                 animate={inView ? "visible" : "hidden"}
                                 variants={fadeInFromBottom}
                                 transition={{ delay: 0.3, duration: 0.6 }}
-                                className="text-3xl font-bold from-cyan-600 via-green-600 to-slate-600 bg-gradient-to-r bg-clip-text text-transparent md:text-4xl xl:text-5xl leading-tight">Why Choose Neo Great Line?</motion.h1>
+                                className="md:text-6xl font-bold from-cyan-600 via-green-600 to-slate-600 bg-gradient-to-r bg-clip-text text-transparent text-3xl leading-tight">Why Choose Neo Great Line?</motion.h1>
                         </div>
                         <motion.p
                             initial="hidden"
