@@ -83,14 +83,29 @@ export default function Features() {
 
     return (
         <>
-            <section className="py-20  dark:bg-gray-950">
+            <section className="py-20  dark:bg-gray-950" ref={ref}>
                 <div className="max-w-7xl mx-auto relative px-5 sm:px-10 md:px-12 lg:px-5 overflow-hidden">
                     <div className="flex flex-col gap-5">
                         <div className="space-y-4 max-w-xl">
-                            <span className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-blue-700 dark:text-gray-100">Feature</span>
-                            <h1 className="text-3xl font-bold from-cyan-600 via-green-600 to-slate-600 bg-gradient-to-r bg-clip-text text-transparent md:text-4xl xl:text-5xl leading-tight">Why Choose Neo Great Line?</h1>
+                            <motion.span
+                                initial="hidden"
+                                animate={inView ? "visible" : "hidden"}
+                                variants={fadeInFromBottom}
+                                transition={{ delay: 0.2, duration: 0.5 }}
+                                className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-blue-700 dark:text-gray-100">Feature</motion.span>
+                            <motion.h1
+                                initial="hidden"
+                                animate={inView ? "visible" : "hidden"}
+                                variants={fadeInFromBottom}
+                                transition={{ delay: 0.3, duration: 0.6 }}
+                                className="text-3xl font-bold from-cyan-600 via-green-600 to-slate-600 bg-gradient-to-r bg-clip-text text-transparent md:text-4xl xl:text-5xl leading-tight">Why Choose Neo Great Line?</motion.h1>
                         </div>
-                        <p className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we're transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</p>
+                        <motion.p
+                            initial="hidden"
+                            animate={inView ? "visible" : "hidden"}
+                            variants={fadeInFromBottom}
+                            transition={{ delay: 0.4, duration: 0.7 }}
+                            className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we're transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</motion.p>
                     </div>
                     <div className="mt-16 flex flex-col md:flex-row gap-8 xl:gap-10">
                         <div className="md:w-96 lg:w-[26rem] space-y-5 flex flex-col md:py-6">
@@ -98,6 +113,10 @@ export default function Features() {
                                 <motion.div
                                     key={index}
                                     className={`cursor-pointer relative p-3 before:rounded-md rounded-md backdrop-blur-lg space-y-3 before:absolute before:transition-all ${selectedFeature === index ? 'before:ease-linear before:scale-x-105 before:scale-y-110 before:inset-0 before:bg-gradient-to-b from-cyan-500 to-blue-500 text-white' : 'hover:before:ease-linear hover:before:scale-x-105 hover:before:scale-y-110 before:inset-0 hover:before:bg-gray-100 hover:before:dark:bg-gray-900'}`}
+                                    initial="hidden"
+                                    animate={inView ? "visible" : "hidden"}
+                                    variants={fadeInFromBottom}
+                                    transition={{ delay: 0.2 * index, duration: 0.7 }}
                                     onClick={() => handleFeatureClick(index)}
                                     whileHover={{ scale: selectedFeature === index ? 1 : 0.95 }}
                                     whileTap={{ scale: 0.95 }}
@@ -105,9 +124,14 @@ export default function Features() {
                                         boxShadow: selectedFeature === index ? '0 0 20px 8px rgba(59, 130, 246, 0.5)' : 'none'
                                     }}
                                 >
-                                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white relative">
+                                    <motion.h2
+                                        initial="hidden"
+                                        animate={inView ? "visible" : "hidden"}
+                                        variants={fadeInLeft}
+                                        transition={{ delay: 0.5, duration: 0.8 }}
+                                        className="text-xl font-semibold text-gray-900 dark:text-white relative">
                                         {feature.title}
-                                    </h2>
+                                    </motion.h2>
                                     {selectedFeature === index && (
                                         <p className="relative text-gray-700 dark:text-gray-300 text-sm">
                                             {feature.description}
@@ -124,7 +148,11 @@ export default function Features() {
                                 animate={{ y: 0 }}
                                 transition={{ type: "spring", stiffness: 120, damping: 15 }}
                             >
-                                <img
+                                <motion.img
+                                    initial="hidden"
+                                    animate={inView ? "visible" : "hidden"}
+                                    variants={fadeInFromRight}
+                                    transition={{ delay: 0.2, duration: 0.5 }}
                                     src={`${features[selectedFeature]?.imageUrl || "https://placehold.co/1500x1000"}`}
                                     alt="illustration"
                                     width={1800}
@@ -133,7 +161,12 @@ export default function Features() {
                             </motion.div>
                         </div>
                     </div>
-                    <Meteors number={90} />
+                    <motion.div
+                        initial="hidden"
+                        animate={inView ? "visible" : "hidden"}
+                        variants={fadeInLeft}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    ><Meteors number={90} /></motion.div>
                 </div>
             </section>
         </>
