@@ -9,25 +9,25 @@ export default function Testimonial() {
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique lectus a feugiat dictum. Nullam quis elit a ligula vehicula malesuada. Curabitur eget eros vitae sapien tristique dignissim. Aliquam convallis, sapien eu suscipit ultricies, ligula velit luctus est, nec pulvinar magna elit vel justo.",
             author: "Alice Johnson",
             company: "ABC Corporation",
-            image: "https://placehold.co/1500x1000"
+            image: "https://source.unsplash.com/random/1500x1000?sig=1"
         },
         {
             content: "Vestibulum fermentum odio vitae erat aliquam, id bibendum nisl ultricies. Sed rhoncus euismod justo at pharetra. Ut ac nunc feugiat, posuere turpis non, tristique mauris. Nulla facilisi. Sed ullamcorper tempus mauris, ac placerat metus consectetur non. Proin id convallis lorem, ac tincidunt ipsum.",
             author: "Bob Smith",
             company: "XYZ Enterprises",
-            image: "https://placehold.co/1500x1000"
+            image: "https://source.unsplash.com/random/1500x1000?sig=2"
         },
         {
             content: "Integer ullamcorper, lacus eget fermentum scelerisque, nisl libero porta nisi, at malesuada turpis quam nec nulla. Curabitur scelerisque mi ut nulla eleifend consequat. Phasellus at est at nulla fermentum varius. Nullam ut mi vel justo fringilla luctus ut non mauris.",
             author: "Emily Brown",
             company: "123 Industries",
-            image: "https://placehold.co/1500x1000"
+            image: "https://source.unsplash.com/random/1500x1000?sig=3"
         },
         {
             content: "Duis auctor dui nec vehicula posuere. Proin consectetur, ligula vitae posuere volutpat, libero mauris vestibulum sapien, vel venenatis enim orci a purus. Vestibulum tincidunt fringilla urna. Nam mattis libero eu sapien accumsan, nec cursus urna convallis.",
             author: "David Wilson",
             company: "Acme Corporation",
-            image: "https://placehold.co/1500x1000"
+            image: "https://source.unsplash.com/random/1500x1000?sig=4"
         },
     ];
 

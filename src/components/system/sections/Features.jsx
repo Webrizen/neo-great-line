@@ -12,22 +12,22 @@ export default function Features() {
         {
             title: "AI-Driven Quotes",
             description: "Our revolutionary AI technology leverages advanced algorithms to analyze data and generate accurate, personalized quotes tailored to your specific needs. Say goodbye to guesswork and hello to precision.",
-            imageUrl: "https://placehold.co/1508x1504"
+            imageUrl: "https://source.unsplash.com/random/1500x1000?sig=1"
         },
         {
             title: "Transparent Pricing",
             description: "We believe in transparency. With Neo Great Line, you'll never encounter hidden fees or surprises. Our pricing is straightforward, honest, and designed to provide the best value for your investment.",
-            imageUrl: "https://placehold.co/1505x1501"
+            imageUrl: "https://source.unsplash.com/random/1500x1000?sig=2"
         },
         {
             title: "Code Ownership",
             description: "We understand the importance of ownership and control. When you choose Neo Great Line, you retain full ownership of the generated code. It's yours to customize, modify, and utilize as you see fit.",
-            imageUrl: "https://placehold.co/1501x1502"
+            imageUrl: "https://source.unsplash.com/random/1500x1000?sig=3"
         },
         {
             title: "Sleek Visuals",
             description: "Our product presentation isn't just informative; it's visually stunning. Experience sleek graphics that bring the AI quote process to life, making it easy to understand and captivating to behold.",
-            imageUrl: "https://placehold.co/1504x1503"
+            imageUrl: "https://source.unsplash.com/random/1500x1000?sig=4"
         }
     ];
 
@@ -35,7 +35,7 @@ export default function Features() {
         // Set up an interval to change the selected feature every 30 seconds
         const id = setInterval(() => {
             setSelectedFeature(prevFeature => (prevFeature + 1) % features.length);
-        }, 30000);
+        }, 3000);
         setIntervalId(id);
 
         // Clean up the interval on component unmount
