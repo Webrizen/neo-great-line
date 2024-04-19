@@ -45,7 +45,8 @@ const ParticleRing = () => {
         <div className="relative">
             <Canvas
                 camera={{
-                    position: [10, -7.5, -5],
+                    position: [10, 10, -40],
+                    fov: 60,
                 }}
                 style={{ height: "100vh" }}
                 className="bg-slate-950"
@@ -70,7 +71,7 @@ const ParticleRing = () => {
                     </div>
                     <div className="absolute animate-fourth dark:opacity-25 filter blur-3xl bottom-8 left-20 w-[500px] h-72 bg-gradient-to-r from-yellow-200 to-pink-300 rounded-full opacity-80 animate-blob animation-delay-4000">
                     </div>
-                    <img src="/space-hero/6.png" alt="Hero-img" className='aspect-square w-[200px] h-[200px] move-up-down absolute left-[160px] top-[100px]' />
+                    <img src="/space-hero/6.png" alt="Hero-img" className='aspect-square w-[200px] h-[200px] move-up-down absolute left-[11%] top-[100px] z-50' />
                     <img src="/space-hero/9.png" alt="Hero-img" className='aspect-square w-[100px] h-[100px] move-up-down absolute right-[15%] bottom-[20%] z-50' />
                     <div className="relative mx-auto pt-32 pb-24 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10">
                         <motion.h1
