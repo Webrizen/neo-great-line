@@ -7,7 +7,7 @@ import {
   useSpring,
   MotionValue,
 } from "framer-motion";
-import Image from "next/image";
+import { useInView } from 'react-intersection-observer';
 import Link from "next/link";
 
 export const HeroParallax = ({
@@ -48,6 +48,7 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
   return (
     <div
       ref={ref}
@@ -96,16 +97,36 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+  const fadeInFromBottom = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
-      </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0" ref={ref}>
+      <motion.h1
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={fadeInFromBottom}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="text-2xl md:text-7xl font-bold dark:text-white">
+        The Ultimate <br /> Destination For Your Needs.
+      </motion.h1>
+      <motion.p
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={fadeInFromBottom}
+        transition={{ delay: 0.4, duration: 0.7 }}
+        className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products.
-      </p>
+      </motion.p>
     </div>
   );
 };

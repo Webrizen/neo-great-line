@@ -2,6 +2,7 @@ import "./globals.css";
 import { DM_Sans } from 'next/font/google';
 import { Providers } from "./providers";
 import Navbar from "@/components/system/Navbar";
+import FooterBlock from "@/components/system/FooterBlock";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Navbar />
           {children}
+          <FooterBlock />
         </Providers>
       </body>
     </html>
