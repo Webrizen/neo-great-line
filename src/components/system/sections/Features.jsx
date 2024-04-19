@@ -50,11 +50,6 @@ export default function Features() {
         triggerOnce: false,
         threshold: 0.5,
     });
-    // Animation variants
-    const fadeInFromTop = {
-        hidden: { opacity: 0, y: -20 },
-        visible: { opacity: 1, y: 0 }
-    };
 
     const fadeInFromBottom = {
         hidden: { opacity: 0, y: 20 },
@@ -71,21 +66,11 @@ export default function Features() {
         visible: { opacity: 1, x: 0 }
     };
 
-    const flipIn = {
-        hidden: { opacity: 0, rotateY: 90, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            rotateY: 0,
-            scale: 1,
-            transition: { type: 'spring', stiffness: 100 }
-        }
-    };
-
     return (
         <>
             <section className="py-20  dark:bg-gray-950" ref={ref}>
                 <div className="max-w-7xl mx-auto relative px-5 sm:px-10 md:px-12 lg:px-5 overflow-hidden">
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-5 relative">
                         <div className="space-y-4 max-w-xl">
                             <motion.span
                                 initial="hidden"
@@ -106,6 +91,7 @@ export default function Features() {
                             variants={fadeInFromBottom}
                             transition={{ delay: 0.4, duration: 0.7 }}
                             className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we're transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</motion.p>
+                            <img src="/space-hero/4.png" alt="Image" className='w-[300px] h-[300px] aspect-square absolute right-2 top-0 bottom-0 my-auto' />
                     </div>
                     <div className="mt-16 flex flex-col md:flex-row gap-8 xl:gap-10">
                         <div className="md:w-96 lg:w-[26rem] space-y-5 flex flex-col md:py-6">
