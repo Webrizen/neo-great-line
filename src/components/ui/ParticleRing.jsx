@@ -45,8 +45,7 @@ const ParticleRing = () => {
         <div className="relative">
             <Canvas
                 camera={{
-                    position: [10, 10, -40],
-                    fov: 60,
+                    position: [4, -7.5, -5],
                 }}
                 style={{ height: "100vh" }}
                 className="bg-slate-950"

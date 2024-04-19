@@ -79,7 +79,7 @@ export default function Testimonial() {
     };
 
     return (
-        <section className="py-20 dark:bg-gray-950 bg-[url('/gradient.svg')] bg-center bg-no-repeat bg-cover" ref={ref}>
+        <section className="py-20 dark:bg-gray-950 custom-bg bg-contain" ref={ref}>
             <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
                 <div className="space-y-4 max-w-2xl">
                     <motion.span
@@ -112,7 +112,7 @@ export default function Testimonial() {
                                 transition={{ delay: 0.5, duration: 0.8 }}
                                 src={currentTestimonial.image} width={1900} height={1200} alt="Author Avatar" className="w-full h-full object-cover rounded-lg" />
                         </motion.div>
-                        <div className="flex-1 flex flex-col space-y-6 md:space-y-12 lg:space-y-16 md:py-6 lg:py-8 md:h-auto md:justify-center">
+                        <div className="flex-1 backdrop-blur rounded-xl flex flex-col space-y-6 md:space-y-12 lg:space-y-16 md:py-6 lg:py-8 md:h-auto md:justify-center">
                             <AnimatePresence exitBeforeEnter={false} mode="wait">
                                 <motion.p className="text-xl lg:text-2xl font-medium text-gray-700 dark:text-gray-300"
                                     key={currentTestimonialIndex}
