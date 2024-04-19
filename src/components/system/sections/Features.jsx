@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Meteors } from '@/components/ui/meteors';
+import {
+    TextRevealCard,
+    TextRevealCardDescription,
+    TextRevealCardTitle,
+  } from "@/components/ui/text-reveal-card";
 
 export default function Features() {
     const [selectedFeature, setSelectedFeature] = useState(null);
@@ -47,23 +52,23 @@ export default function Features() {
 
     return (
         <>
-            <section className="py-20  bg-gray-950">
+            <section className="py-20  dark:bg-gray-950">
                 <div className="max-w-7xl mx-auto relative px-5 sm:px-10 md:px-12 lg:px-5 overflow-hidden">
                     <div className="flex flex-col gap-5">
                         <div className="space-y-4 max-w-xl">
                             <span className="rounded-lg bg-blue-50 dark:bg-gray-900 px-2.5 py-1 text-xs font-semibold tracking-wide text-blue-700 dark:text-gray-100">Feature</span>
-                            <h1 className="text-3xl font-semibold text-blue-950 dark:text-gray-200 md:text-4xl xl:text-5xl leading-tight">Why Choose Neo Great Line?</h1>
+                            <h1 className="text-3xl font-bold from-cyan-600 via-green-600 to-slate-600 bg-gradient-to-r bg-clip-text text-transparent md:text-4xl xl:text-5xl leading-tight">Why Choose Neo Great Line?</h1>
                         </div>
-                        <p className="text-gray-700 dark:text-gray-300">At Neo Great Line, we're transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</p>
+                        <p className="text-gray-700 dark:text-gray-300 md:max-w-3xl">At Neo Great Line, we're transforming the way quotes are generated, making it smarter, more transparent, and entirely client-centric. Here's why you should choose us.</p>
                     </div>
                     <div className="mt-16 flex flex-col md:flex-row gap-8 xl:gap-10">
                         <div className="md:w-96 lg:w-[26rem] space-y-5 flex flex-col md:py-6">
                             {features.map((feature, index) => (
                                 <motion.div
                                     key={index}
-                                    className={`cursor-pointer relative p-3 before:rounded-md rounded-md backdrop-blur-lg space-y-3 before:absolute before:transition-all hover:before:ease-linear hover:before:scale-x-105 hover:before:scale-y-110 before:inset-0 hover:before:bg-gray-100 before:dark:hover:bg-gray-900 ${selectedFeature === index ? 'bg-gradient-to-b from-cyan-500 to-blue-500 text-white' : ''}`}
+                                    className={`cursor-pointer relative p-3 before:rounded-md rounded-md backdrop-blur-lg space-y-3 before:absolute before:transition-all ${selectedFeature === index ? 'before:ease-linear before:scale-x-105 before:scale-y-110 before:inset-0 before:bg-gradient-to-b from-cyan-500 to-blue-500 text-white' : 'hover:before:ease-linear hover:before:scale-x-105 hover:before:scale-y-110 before:inset-0 hover:before:bg-gray-100 hover:before:dark:bg-gray-900'}`}
                                     onClick={() => handleFeatureClick(index)}
-                                    whileHover={{ scale: 0.95 }}
+                                    whileHover={{ scale: selectedFeature === index ? 1 : 0.95 }}
                                     whileTap={{ scale: 0.95 }}
                                     style={{
                                         boxShadow: selectedFeature === index ? '0 0 20px 8px rgba(59, 130, 246, 0.5)' : 'none'

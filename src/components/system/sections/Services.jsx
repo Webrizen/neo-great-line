@@ -82,7 +82,7 @@ const content = [
 
 export default function Services() {
     return (
-        <section className="w-full min-h-screen bg-gray-950">
+        <section className="w-full min-h-screen dark:bg-gray-950">
             <div className="relative">
                 <div className="flex items-center align-center text-center w-full flex-row absolute inset-x-0">
                     <div className="flex border-gray-200 dark:border-gray-800 w-full border-t border-solid"></div>
